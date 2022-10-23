@@ -1,4 +1,3 @@
-from pydoc import stripid
 from pydantic import BaseSettings
 
 # this is to validate that all environment variables exist and that they are set appropriately

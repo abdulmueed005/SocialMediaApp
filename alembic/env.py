@@ -1,9 +1,9 @@
-#this file and folder "alembic" is created after installing alembic and then passing "alembic init alembic" int the terminal
+#this file and folder "alembic" is created after installing alembic and then passing "alembic init alembic" into the terminal
 #once this is done, import the base from models.py file
 #then update target_metadata to Base.metadata. This rigs alembic to the sql alchemy models
 # finally go to alembic.ini
 
-#come back here to config.set_main_option which overrised the URL option in alembic.ini file. The reason is for security.
+#come back here to config.set_main_option which overrides the URL option in alembic.ini file. The reason is for security.
 
 
 from logging.config import fileConfig
@@ -88,4 +88,4 @@ if context.is_offline_mode():
 else:
     run_migrations_online()
 
-#testting
+#testtingrgrwtouch readme

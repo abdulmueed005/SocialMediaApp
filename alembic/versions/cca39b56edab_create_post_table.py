@@ -1,8 +1,8 @@
-"""create posts table
+"""create post table
 
-Revision ID: 8767059922ae
-Revises: 22d21d3b4c12
-Create Date: 2022-10-09 15:55:13.416445
+Revision ID: cca39b56edab
+Revises: 
+Create Date: 2022-10-14 03:40:20.918146
 
 """
 from alembic import op
@@ -10,14 +10,14 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '8767059922ae'
+revision = 'cca39b56edab'
 down_revision = None
 branch_labels = None
 depends_on = None
 
 
 def upgrade():
-    op.create_table('posts', sa.Column('id', sa.Integer(), nullable=False, 
+    op.create_table('posts', sa.Column('id', sa.Integer(), nullable=False,
     primary_key=True), sa.Column('title', sa.String(), nullable=False))
     pass
 

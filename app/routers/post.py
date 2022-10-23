@@ -19,7 +19,7 @@ limit: int = 10, skip: int = 0, search: Optional[str] = ""):
     
     return posts
 
-    # if you want the app to only return posts from the ID that is signed in, the use:
+    # if you want the app to only return posts from the ID that is signed in, then use:
     #posts = db.query(models.Post).filter(models.Post.owner_id==current_user.id).all()
 
 # the follwing is what used to get all posts directly using SQL. 
@@ -31,7 +31,7 @@ limit: int = 10, skip: int = 0, search: Optional[str] = ""):
 
 @router.post("/", status_code=status.HTTP_201_CREATED,response_model=schemas.Post)
 def create_posts(post: schemas.PostCreate,db: Session = Depends(get_db), current_user: int = Depends(oauth2.get_current_user)):
-    print (current_user)
+#    print (current_user)
     new_post = models.Post(owner_id=current_user.id, **post.dict())
 # the code above ** Post simply lets us not have to explicitly state all out fields in the models like this next line. 
 #   new_post = models.Post(title=post.title, content=post.content, published=post.published)

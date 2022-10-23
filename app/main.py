@@ -11,7 +11,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
-#input in origins the list of URLs that can talk to our API
+#input in origins the list of URLs that can talk to our API. i.e., who can access our api endpoints * for everything
 origins =["*"]
 
 app.add_middleware(
@@ -31,6 +31,6 @@ app.include_router(vote.router)
 
 @app.get("/")
 async def root():
-    return {"message": "Hello World!!!!!"}
+    return {"message": "Hello Worlds!!!!!"}
 
 
